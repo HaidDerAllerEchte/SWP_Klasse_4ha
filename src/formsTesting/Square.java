@@ -4,9 +4,9 @@ public class Square extends Form {
 	
 	private Rectangle rectangle;
 	
-	public Square(double x, double y, double width) {
+	public Square(double x, double y, double width, double length) {
 		super(x, y);
-		rectangle = new Rectangle(x,y,width,3*width);
+		rectangle = new Rectangle(x,y,width,length);
 	}
 
 	public Rectangle getRectangle() {
