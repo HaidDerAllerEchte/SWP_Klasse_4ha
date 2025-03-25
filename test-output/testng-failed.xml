@@ -3,12 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="htl.MyMathTest">
+      <class name="exceptionTesting.Aufgabe2Test">
         <methods>
-          <include name="testMulti"/>
-          <include name="testDivide"/>
+          <include name="sqrtTest"/>
         </methods>
-      </class> <!-- htl.MyMathTest -->
+      </class> <!-- exceptionTesting.Aufgabe2Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

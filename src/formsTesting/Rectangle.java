@@ -1,5 +1,8 @@
 package formsTesting;
 
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
 public class Rectangle extends Form {
 
 	private double width;
@@ -27,14 +30,23 @@ public class Rectangle extends Form {
 		this.length = length;
 	}
 
-	public double calculateArea() {
-		return this.width*this.length;
-	}
-
-	public double calculateCircumference() {
-		return (this.width+this.length)*2;
-	}
 	
+	
+	public double calculateArea() throws widthException{
+		if(this.width <= 0 || this.length <= 0) {
+			throw new widthException("Die Länge oder Breite darf nicht 0 sein wenn die Fläche berechnet wird!");
+		} else {
+		return this.width*this.length;
+		}
+	}
+ 
+	public double calculateCircumference() throws widthException{
+		if(this.width <= 0 || this.length <= 0) {
+			throw new widthException("Die Länge oder Breite darf nicht 0 sein wenn der Umfang berechnet wird!");
+		} else {
+		return (this.width*this.length)*2;
+		}
+	}
 	public String toString() {
 		return "Rectangle (" + this.getX() + "|" + this.getY() + ") with width = " 
 					+ this.getWidth() + " and length = " + this.getLength(); 

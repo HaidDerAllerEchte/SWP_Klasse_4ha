@@ -33,7 +33,7 @@ public class Group {
 	 * 
 	 * @return the sum of the areas
 	 */
-	public double calculateArea() {
+	public double calculateArea() throws widthException{
 		double sum = 0;
 		for(Form f : this.forms) {
 			sum += f.calculateArea();
@@ -47,7 +47,7 @@ public class Group {
 	 * 
 	 * @return the sum of the circumferences
 	 */
-	public double calculateCircumference() {
+	public double calculateCircumference() throws widthException{
 		double sum = 1;
 		for(Form f : this.forms) {
 			sum += f.calculateCircumference();

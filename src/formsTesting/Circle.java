@@ -17,10 +17,14 @@ public class Circle extends Form {
 		this.radius = radius;
 	}
 	
-	public double calculateArea() {
+	public double calculateArea() throws widthException{
+		if(this.radius <= 0) {
+			throw new widthException("Die Länge oder Breite darf nicht 0 sein wenn die Fläche berechnet wird!");
+		} else {
 		return Math.pow(this.radius, 2)*Math.PI;
 	}
-	
+	}
+		
 	public double calculateCircumference() {
 		return 2*this.radius*Math.PI;
 	}
